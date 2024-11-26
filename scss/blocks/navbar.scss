@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: $background-color;
+
+    &__logo {
+        font-size: 24px;
+        font-weight: bold;
+
+        &-link {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+
+        .header__link {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $link-hover;
+            }
+
+            &--primary {
+                color: white;
+                background-color: $primary-color;
+                @include button-style;
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+$primary-color: #2a9d8f;
+$secondary-color: #264653;
+$background-color: #f4f4f4;
+$text-color: #333;
+$link-hover: #e76f51;
+$font-family: "D:\College\webдизайн\Приклад для 3 пр\fonts\roboto\roboto-italic-webfont.woff2";
+@use "./bootstrap-reboot/mixins/button-style" as button;
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    color: $text-color;
+    background-color: $background-color;
+    ;
+}
+
+.plants {
+    padding: 50px 0;
+
+    &__container {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .plant-card {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 15px;
+        width: 200px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: $background-color;
+
+    &__logo {
+        font-size: 24px;
+        font-weight: bold;
+
+        &-link {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+
+        .header__link {
+            color: $text-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $link-hover;
+            }
+
+            &--primary {
+                color: white;
+                background-color: $primary-color;
+
+            }
+        }
+    }
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.product {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    /* Вирівнювання верхнього краю */
+    width: 100%;
+    /* Займає весь простір секції */
+}
+
+.product__image {
+    flex: 1;
+    /* Зображення займає 1 частину ширини */
+}
+
+.product__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product__details {
+    flex: 1;
+    /* Контент займає 1 частину ширини */
+    display: flex;
+    flex-direction: column;
+    /* Елементи вертикально */
+    justify-content: flex-start;
+}
+
+.product__title {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 20px;
+}
+
+.product__description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $secondary-color;
+    margin-bottom: 20px;
+}
+
+.product__navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.product__nav {
+    font-size: 1rem;
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $primary-color;
+        color: #fff;
+    }
+}

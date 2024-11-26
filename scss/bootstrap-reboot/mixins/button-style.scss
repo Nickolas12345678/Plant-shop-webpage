@@ -1,0 +1,20 @@
+@mixin button-style {
+    font-size: 16px;
+    color: #fff;
+    background-color: #2a9d8f;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        background-color: #21867a;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        background-color: #1b6a64;
+        transform: scale(1);
+    }
+}
