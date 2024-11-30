@@ -403,6 +403,91 @@ body {
     background-color: #21867a;
 }
 
+
+
+.animate {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+body[data-theme='dark'] .theme-toggle {
+    color: #fff;
+}
+
+body[data-theme='dark'] {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body[data-theme='dark'] .header {
+    background-color: #333333;
+}
+
+body[data-theme='dark'] .footer {
+    background-color: #333333;
+}
+
+body[data-theme='dark'] .header__link {
+    color: #ffffff;
+}
+
+body[data-theme='dark'] .header__link--primary {
+    color: #f0f0f0;
+}
+
+body[data-theme='dark'] .product__title {
+    color: #ffffff;
+}
+
+body[data-theme='dark'] .features__title {
+    color: #ffffff;
+}
+
+body[data-theme='dark'] .plant-card__name {
+    color: #ffffff;
+}
+
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+}
+
+.language-toggle {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.language-toggle:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
 @media (max-width: 480px) {
     .header {
         flex-direction: column;
